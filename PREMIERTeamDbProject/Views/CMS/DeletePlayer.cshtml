@@ -1,0 +1,17 @@
+﻿@model PREMIERTeamDbProject.Models.Player
+@{
+    Layout = "_CMS";
+    ViewData["Title"] = "Delete Player";
+}
+
+<form method="post">
+
+    <input type="hidden" name="PlayerID" value="@Model.PlayerID" />
+
+    <p>Delete player @Model.PlayerName?</p>
+
+    <p><input type="submit" value="Delete" class="delete" /></p>
+
+    <p><a asp-controller="CMS" asp-action="Index" class="add">Keep</a><br></p>
+
+</form>

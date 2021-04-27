@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "_AllTeams";
+
+}
+
+@{
+    ViewData["Title"] = "Full Team List";
+    ViewData["PageHeading"] = "Full Team List";
+}
+
+<section class="wrap">
+    @foreach (var item in Model)
+    {
+        <div class="teamThumb">
+            <div><a asp-controller="Home" asp-action="TeamDetails" asp-route-id="@item.TeamID"><img src="~/images/@item.TeamImage" alt="@item.TeamTitle" /></a></div>
+            <h3><a asp-controller="Home" asp-action="TeamDetails" asp-route-id="@item.TeamID">@item.TeamTitle</a></h3>
+        </div>
+    }
+</section>
+
+
+
+
+

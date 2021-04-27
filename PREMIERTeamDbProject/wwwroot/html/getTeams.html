@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fetch Example</title>
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" media="only screen and (min-width : 600px)" href="css/desktop.css">
+</head>
+<body>
+    <main class="noflex">
+        <div>
+            <h1>Fetch Example</h1>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team Title</th>
+                        <th>Team Certificate</th>
+                        <th>Team Price</th>
+                    </tr>
+                </thead>
+                <tbody id="myData">
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<script>
+    (function () {
+        // IIFE
+        let api = "Home/ApiData";
+        fetch(api)
+            .then(response => response.json())
+            .then(myJson => {
+                console.dir(myJson);
+                document.getElementById("myData").innerHTML = myJson.map(obj => {
+                    let myStr = `<tr>
+                  <td><a href="getTeamDetails.html?teamID=${obj.TeamID}">${obj.TeamTitle}</a></td>
+                  <td>${obj.TeamCertificate}</td>
+                  <td>${obj.TeamPrice}</td>
+                </tr>`
+                    return myStr
+                }).join("")
+                // use join with template literals to remove extra comma
+            })
+            .catch(() => console.log("damn that Jason"));
+
+    })()
+</script>
+</html>
+

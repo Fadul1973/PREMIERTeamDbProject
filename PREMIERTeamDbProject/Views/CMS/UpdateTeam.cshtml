@@ -1,0 +1,51 @@
+﻿@model PREMIERTeamDbProject.Models.TeamForm
+@{
+    Layout = "_CMS";
+}
+<h1>@Model.TeamTitle</h1>
+
+
+<form asp-controller="CMS" asp-action="UpdateTeam">
+    <input type="hidden" name="TeamID" value="@Model.TeamID" />
+    <div>
+        <label>Team Title</label>
+        <input asp-for="TeamTitle" />
+        <span asp-validation-for="TeamTitle" class="error"></span>
+    </div>
+
+    <div>
+        <label asp-for="TeamCertificate">Team Certificate</label>
+        <input asp-for="TeamCertificate" />
+    </div>
+
+    <div>
+        <label asp-for="TeamDescription">Team Description</label>
+        <textarea asp-for="TeamDescription"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="TeamImage">Team Image</label>
+        <input type="text" asp-for="TeamImage" />
+    </div>
+
+    <div>
+        <label asp-for="TeamPrice">Team Price</label>
+        <input type="text" asp-for="TeamPrice" />
+    </div>
+
+    <div>
+        <label asp-for="Stars">Stars</label>
+        <input type="text" asp-for="Stars" />
+    </div>
+
+    <div>
+        <label asp-for="ReleaseDate">Release Date</label>
+        <input type="date" asp-for="ReleaseDate" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update" class="edit" />
+    </div>
+
+</form>
+

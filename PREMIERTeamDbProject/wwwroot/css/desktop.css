@@ -1,0 +1,187 @@
+﻿body {
+    background-color:#ccc;
+}
+
+.burgerMenuContainer > img {
+    display: none;
+}
+
+.innerHeader {
+    padding-top: 30px;
+    height: 100px;
+}
+
+.innerHeader > div {
+    margin: auto;
+    max-width: 1280px;
+}
+
+/*Navaigations*/
+nav {
+    height: 80px;
+    flex: 1 1 80%;
+    display:flex;   
+    justify-content:flex-end;
+}
+
+nav {    
+    overflow:visible;
+}
+
+nav ul {
+    display: flex;
+}
+nav ul li {
+    padding: 4px;
+    border-bottom:none;
+}
+
+nav ul li a {
+    margin: 0 15px;
+    display: flex;
+    padding: 5px;
+    text-decoration: none;
+    border: none;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid #fff;
+}
+
+/*Main content*/
+main {
+    max-width: 1280px;
+    margin: auto; 
+}
+
+/*Articles*/
+.articles {
+    flex-wrap: wrap;
+    font-size: 1.2rem; 
+}
+
+.articles{
+    height:100%;
+    width:100%;
+}
+
+.articles > div {
+    flex: 1 1 25%;
+    padding: 0;
+    margin: 0 20px;
+}
+
+.articles > div {
+    margin-left: 0;
+    margin-right: 25px;
+}
+
+section {
+    flex: 0 0 75%;
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+section > div.teamThumb {
+    padding: 10px;
+    width: calc((100% / 4));
+}
+
+section > div > h3 > a {
+    font-weight: 100;
+    margin: 0 0 15px 0;
+    color: #000;
+    text-decoration: none;
+}
+
+div.teamThumb > div {
+    overflow: hidden;
+}
+
+div.teamThumb > div > a > img {
+    width: 100%;
+    transform: scale(0.9,0.9);
+    transition: all 0.5s;
+}
+
+div.teamThumb > div > a > img:hover {
+    transform: scale(1,1);
+}
+
+.mainImage, .teamInfo {
+    padding: 5px;
+}
+
+.teamInfo {
+    flex: 0 0 50%;
+}
+
+.mainImage > img {
+    width: 100%;
+}
+
+.teamInfo h2 {
+    margin-top: 0;
+}
+
+input[type=number] {
+    width: 80px;
+    padding: 5px;
+}
+
+.searchBox {
+    padding: 5px;
+    font-size: 120%;
+}
+
+.cta {
+    border-radius: 6px;
+    margin-top: 20px;
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--button-color);
+    padding: 10px 25px;
+}
+
+.fullWidth {
+    flex: 0 0 100%;
+}
+
+.fullCart th, .fullCart td {
+    padding: 5px 8px;
+}
+
+.cartSummary {
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 160px;
+}
+
+.cartSummary h4 {
+    margin-bottom: 0;
+}
+
+.cartSummary p {
+    margin: 0;
+}
+.cartSummary p a {
+    border-radius: 6px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    background-color: var(--button-color);
+    padding: 10px 25px;
+}

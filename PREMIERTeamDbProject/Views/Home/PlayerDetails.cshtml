@@ -1,0 +1,30 @@
+﻿@model PREMIERTeamDbProject.Models.Player
+
+@{
+    Layout = "_PlayerDetails";
+}
+
+@{
+    ViewData["Title"] = @Model.PlayerName;
+    ViewData["PageHeading"] = @Model.PlayerName;
+}
+
+<section>
+
+    <div class="mainImage">
+        <img src="~/images/@Model.PlayerImage" alt="@Model.PlayerName" />
+    </div>
+
+    <div class="playerInfo">
+        <h2>@Model.PlayerName</h2>
+        <p>@Model.PlayerDescription</p>
+        <p>PlayerClub: @Model.PlayerClub</p>
+        <p>Streaming Price: &pound;@((Model.PlayerPrice).ToString("0.00"))</p>
+
+    </div>
+
+</section>
+
+
+
+

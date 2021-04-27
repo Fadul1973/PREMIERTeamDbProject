@@ -1,0 +1,30 @@
+﻿@model PREMIERTeamDbProject.Models.Team
+
+@{
+    Layout = "_TeamDetails";
+}
+
+@{
+    ViewData["Title"] = @Model.TeamTitle;
+    ViewData["PageHeading"] = @Model.TeamTitle;
+}
+
+<section>
+
+    <div class="mainImage">
+        <img src="~/images/@Model.TeamImage" alt="@Model.TeamTitle" />
+    </div>
+
+    <div class="teamInfo">
+        <h2>@Model.TeamTitle</h2>
+        <p>@Model.TeamDescription</p>
+        <p>Certificate: @Model.TeamCertificate</p>
+        <p>Streaming Price: &pound;@((Model.TeamPrice).ToString("0.00"))</p>
+
+    </div>
+
+</section>
+
+
+
+

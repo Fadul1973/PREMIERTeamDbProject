@@ -1,0 +1,49 @@
+﻿@model PREMIERTeamDbProject.Models.PlayerForm
+@{
+    Layout = "_CMS";
+}
+<h1>Add Player</h1>
+
+<form asp-controller="CMS" asp-action="AddPlayer">
+    <div>
+        <label asp-for="PlayerName">Player Name</label>
+        <input type="text" asp-for="PlayerName" />
+        <span asp-validation-for="PlayerName" class="error"></span>
+    </div>
+
+    <div>
+        <label asp-for="PlayerClub">Player Club</label>
+        <input type="text" asp-for="PlayerClub" />
+        <span asp-validation-for="PlayerClub" class="error"></span>
+    </div>
+
+    <div>
+        <label asp-for="PlayerDescription">Player Description</label>
+        <textarea asp-for="PlayerDescription"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="PlayerImage">Player Image</label>
+        <input asp-for="PlayerImage" />
+    </div>
+
+    <div>
+        <label asp-for="PlayerPrice">Player Price</label>
+        <input type="text" asp-for="PlayerPrice" />
+    </div>
+
+    <div>
+        <label asp-for="PlayerStatus">Player Status</label>
+        <input type="text" asp-for="PlayerStatus" />
+    </div>
+
+    <div>
+        <label asp-for="DOB">DOB</label>
+        <input type="date" asp-for="DOB" />
+    </div>
+
+    <div>
+        <input type="submit" value="Add" class="add" />
+    </div>
+
+</form>

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fetch Example</title>
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" media="only screen and (min-width : 600px)" href="css/desktop.css">
+</head>
+<body>
+    <main class="noflex">
+        <h1 id="heading"></h1>
+        <div class="item">
+            <div>
+                <p id="desc"></p>
+            </div>
+            <div>
+                <img id="img">
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    (function () {
+        // IIFE
+        let urlParams = new URLSearchParams(window.location.search);
+        let teamID = urlParams.get('teamID');
+        let api = "Home/ApiDataDetails/" + teamID;
+        let heading = document.getElementById("heading");
+        let desc = document.getElementById("desc")
+
+        async function getData(api) {
+            const fetchResult = fetch(api);
+            const response = await fetchResult;
+            const jsonData = await response.json();
+            heading.innerText = jsonData.TeamTitle
+            desc.innerText = jsonData.TeamDescription
+            img.setAttribute("src", "images/" + jsonData.TeamImage)
+        }
+        getData(api);
+
+    })()
+</script>
+</html>

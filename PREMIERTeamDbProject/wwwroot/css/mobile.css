@@ -1,0 +1,101 @@
+﻿:root {
+    --button-color: #C9D91E;
+}
+*{
+    box-sizing:border-box;
+}
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#ccc;
+    
+}
+/*Header/nav styling*/
+.innerHeader {
+    background-color: #000;
+}
+.innerHeader h1 {
+    color: #fff;
+    margin: 0;
+}
+.burgerMenuContainer {
+    display: none;
+}
+.innerHeader div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+nav {
+    flex: 1 1 100%;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+nav ul li {
+    padding: 8px 5px;
+    border-bottom: 1px solid #ccc;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+/*Main styling */
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+.articles > div {
+    flex: 1 1 50%;
+    padding-right: 10px;
+}
+.articles img {
+    width: 100%;
+}
+main {
+    /* IE 11 Fix */
+    display: block;
+    margin: 10px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+.shoppingCart {
+}
+
+.msg {
+    background-color: #F2811D;
+    color: #260707;
+    display: inline-block;
+    padding: 3px 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #ccc;
+}
+
+td, th {
+    border: 1px solid #ccc;
+}
+/*footer*/
+footer {
+    background: #000;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+
